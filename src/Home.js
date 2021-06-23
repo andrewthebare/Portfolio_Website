@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core";
 import arrowBG from './images/ArrowBG.png'
 import profile from './images/TrollyStop.JPG'
 import Button from "@material-ui/core/Button";
+import TopBar from "./TopBar";
 
 export default function (props) {
   
@@ -11,11 +12,12 @@ export default function (props) {
   const cn = useStyles();
   return(
     <div>
+      <TopBar/>
       <div className={cn.heroHolder}>
         <img className={cn.hero} src={arrowBG}/>
         <div className={cn.heroContent}>
           <div className={cn.heroContentItem}>
-            <h1>Hello, I'm Andrew Bare</h1>
+            <h1 className={cn.text}>Hello, I'm Andrew Bare</h1>
             <h5>I am a Computer Science student, software developer, and Shopify Expert!</h5>
             <div className={cn.contactBTN}>Get in Touch</div>
           </div>
@@ -36,6 +38,7 @@ const useStyles=makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: '85px',
     
   },
   hero:{
@@ -80,6 +83,9 @@ const useStyles=makeStyles({
     backgroundColor: 'rgba(252,176,69,1)',
     outline: '1pt solid rgba(202,126,49,1)',
     fontFamily: '"Times New Roman", Times, serif'
+  },
+  text:{
+    wordWrap: "break-word",
   }
   
 })
