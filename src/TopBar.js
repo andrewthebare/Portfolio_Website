@@ -60,7 +60,7 @@ const useStyles = makeStyles({
     top:0,
     zIndex: 2,
     
-    backgroundColor: '#fcfcfc',
+    backgroundColor: '#fcfcfcfc',
     height: '80px',
     display: "flex",
     flexDirection: "row",

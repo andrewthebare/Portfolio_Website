@@ -5,33 +5,86 @@ import arrowBG from './images/ArrowBG.png'
 import profile from './images/TrollyStop.JPG'
 import Button from "@material-ui/core/Button";
 import TopBar from "./TopBar";
+import SquareDisplay from "./Components/SquareDIsplay";
+import {projectData} from "./projectData";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 export default function (props) {
   
   
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    // slidesToShow: window.innerWidth <= 600? 1 : window.innerWidth <= 1000? 2: 3,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    // vertical: window.innerWidth <= 600,
+    focusOnSelect:true,
+  };
+  
+  
   const cn = useStyles();
   return(
-    <div>
+    <div className={cn.homepage}>
       <TopBar/>
       <div className={cn.heroHolder}>
         <img className={cn.hero} src={arrowBG}/>
         <div className={cn.heroContent}>
           <div className={cn.heroContentItem}>
-            <h1 className={cn.text}>Hello, I'm Andrew Bare</h1>
-            <h5>I am a Computer Science student, software developer, and Shopify Expert!</h5>
-            <div className={cn.contactBTN}>Get in Touch</div>
+            <h2 className={cn.text}>Hello, I'm Andrew Bare</h2>
+            <a className={cn.contactBTN}>Get in Touch</a>
           </div>
-          
+  
           <img className={`${cn.heroContentItem} ${cn.imgFit}`} src={profile}/>
         </div>
       </div>
       <br/>
-      <h2>I build smart websites</h2>
+      <div>
+        <h3>I Build Apps and Websites</h3>
+      </div>
+      <div className={cn.section}>
+        <h3>I've built some pretty cool things</h3>
+        <div className={cn.slider}>
+          <Slider {...settings}>
+            {projectData.map(block=>{
+              return(
+                <SquareDisplay {...block}/>
+              )
+            })}
+          </Slider>
+        </div>
+      </div>
+      
     </div>
   )
 }
 
 const useStyles=makeStyles({
+  homepage:{
+    display: "block",
+  },
+  
+  section:{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: '60%',
+    paddingBottom: '20px',
+    
+    background: 'linear-gradient(90deg, rgba(15,125,218,1) 0%, rgba(187,205,255,1) 50%, rgba(15,125,218,1) 100%)'
+  },
+  slider:{
+    position:"relative",
+    width:'100%',
+    maxHeight:'600px',
+    maxWidth: '1200px',
+  },
   heroHolder:{
     position: "relative",
     display:"flex",
@@ -60,7 +113,7 @@ const useStyles=makeStyles({
     justifyContent: "center",
     flexDirection:"column",
     minWidth:'200px',
-    maxWidth:'600px',
+    maxWidth: window.innerWidth>600?  '600px' : window.innerWidth-30+'px',
     objectFit: "contain",
   
     margin: '10px',
@@ -79,7 +132,11 @@ const useStyles=makeStyles({
     height: '40px',
     alignSelf: "center",
     textAlign: "center",
+    alignItems: "center",
+    alignContent: "center",
+    verticalAlign: "middle",
     
+    cursor: "pointer",
     backgroundColor: 'rgba(252,176,69,1)',
     outline: '1pt solid rgba(202,126,49,1)',
     fontFamily: '"Times New Roman", Times, serif'
