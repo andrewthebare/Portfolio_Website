@@ -43,6 +43,7 @@ const useStyles = makeStyles({
         marginBottom: -30,
         background: '#232323',
 
+        minHeight: '300px',
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
