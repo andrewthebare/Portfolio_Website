@@ -16,6 +16,7 @@ export const projectData = [
     title:"Basic TicTacToe",
     description: "TicTacToe with nearly unbeatable AI",
     imgSrc: "",
+    link:'./pages/TicTacToe/index.html'
   },
   {
     title:"Basic Minesweeper",

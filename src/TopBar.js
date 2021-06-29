@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core";
 import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import {SocialIconCustom} from "./Components/Footer";
 
 export default function TopBar(){
   
@@ -30,6 +31,20 @@ export default function TopBar(){
       )
     }
   }
+
+  const drawSocials = () =>{
+    if (window.innerWidth > 500){
+      return(
+          <div>
+            <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://www.instagram.com/andrewthebare'}/>
+            <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://github.com/andrewthebare'}/>
+            <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://linkedin.com/in/andrewbareclemson'}/>
+          </div>
+      )
+    }else{
+      return (<div>a</div>);
+    }
+  }
   
   const cn = useStyles({topBarDisplay});
   return(
@@ -39,14 +54,20 @@ export default function TopBar(){
       </div>
   
       <div className={cn.holder}>
-        <h1>Andrew Bare</h1>
-        <a onClick={()=> triggerDropdown()}>{drawIcon()}</a>
+        <h1 className={cn.title}>Andrew Bare</h1>
+        {drawSocials()}
+        {/*<a onClick={()=> triggerDropdown()}>{drawIcon()}</a>*/}
       </div>
     </div>
   )
 }
 
 const useStyles = makeStyles({
+  title:{
+    // flex: 2,
+
+  },
+
   icon: {
     cursor: "pointer",
   

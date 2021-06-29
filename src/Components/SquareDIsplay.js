@@ -52,16 +52,23 @@ const SquareDisplay = (props)=>{
   }
   
   return(
-    <div className={styles.base}>
-      {hasPicture()}
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      {hasRepo()}
-    </div>
+      <a className={styles.linkStyle} href={props.link || 'none'} target={'_blank'}>
+        <div className={styles.base}>
+          {hasPicture()}
+          <h2>{props.title}</h2>
+          <p>{props.description}</p>
+          {hasRepo()}
+        </div>
+      </a>
   )
 }
 
 const useStyles = makeStyles({
+  linkStyle:{
+    textDecoration: "none",
+    color: "inherit",
+  },
+
   base:{
     width:'90%',
     height:'100%',
@@ -72,7 +79,7 @@ const useStyles = makeStyles({
   
     display:"block",
     flexDirection:"column",
-    backgroundColor: props => props.bgColor || 'rgba(15,125,218,1)'
+    backgroundColor: props => props.bgColor || 'rgb(255,180,25)'
   },
   imageHolder:{
     display: "flex",

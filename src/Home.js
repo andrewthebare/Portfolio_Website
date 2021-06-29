@@ -11,6 +11,7 @@ import {projectData} from "./projectData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./Components/Footer";
 
 
 export default function (props) {
@@ -59,7 +60,8 @@ export default function (props) {
           </Slider>
         </div>
       </div>
-      
+
+      <Footer/>
     </div>
   )
 }
