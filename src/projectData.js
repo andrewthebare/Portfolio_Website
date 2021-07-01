@@ -1,11 +1,5 @@
 export const projectData = [
   {
-    "title": "Volley Heads",
-    "description": "A Volleyball Heads game",
-    "imgSrc": "",
-    ghSource: "https://github.com/andrewthebare/Volleyball-Heads"
-  },
-  {
     title:"Local Food Finder App",
     description: "A simple rewards app for small, local business",
     imgSrc: "../images/FoodFinderAppPics.png",
@@ -13,9 +7,17 @@ export const projectData = [
     bgColor: '#92D45F'
   },
   {
+    "title": "Volley Heads",
+    "description": "A Volleyball Heads game",
+    "imgSrc": "", //TODO Convert good point to gif
+    ghSource: "https://github.com/andrewthebare/Volleyball-Heads",
+    bgColor: '#ddd4d4'
+  },
+  {
     title:"Basic TicTacToe",
     description: "TicTacToe with nearly unbeatable AI",
-    imgSrc: "",
+    imgSrc: "../images/TicTacToe.PNG",
+    imgName: 'ttt',
     link:'./pages/TicTacToe/index.html'
   },
   {

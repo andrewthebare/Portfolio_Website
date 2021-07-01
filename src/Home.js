@@ -47,6 +47,7 @@ export default function (props) {
       <br/>
       <div>
         <h3>I Build Apps and Websites</h3>
+      {/*  TODO SHill bar NPM*/}
       </div>
       <div className={cn.section}>
         <h3>I've built some pretty cool things</h3>
@@ -86,6 +87,7 @@ const useStyles=makeStyles({
     width:'100%',
     maxHeight:'600px',
     maxWidth: '1200px',
+    padding: '15px',
   },
   heroHolder:{
     position: "relative",
