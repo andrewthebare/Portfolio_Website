@@ -5,6 +5,7 @@ import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuOpenIcon from '@material-ui/icons/MenuOpen';
 import {SocialIconCustom} from "./Components/Footer";
+import icon from './images/logoAB.png'
 
 export default function TopBar(){
   
@@ -16,6 +17,12 @@ export default function TopBar(){
     }
     else if (topBarDisplay==='unset'){
       setDropdown('absolute')
+    }
+  }
+
+  const writeTitle = () =>{
+    if(window.innerWidth > 900){
+      return <h1 className={cn.title}>Andrew Bare</h1>
     }
   }
   
@@ -33,7 +40,7 @@ export default function TopBar(){
   }
 
   const drawSocials = () =>{
-    if (window.innerWidth > 500){
+    if (window.innerWidth > 300){
       return(
           <div>
             <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://www.instagram.com/andrewthebare'}/>
@@ -42,19 +49,20 @@ export default function TopBar(){
           </div>
       )
     }else{
-      return (<div>a</div>);
+      return (<div></div>);
     }
   }
   
   const cn = useStyles({topBarDisplay});
   return(
-    <div>
-      <div className={cn.topMenu}>
-        <h3>A</h3>
-      </div>
-  
+    <div className={cn.topBar}>
+      {/*<div className={cn.topMenu}>*/}
+      {/*  <h3>A</h3>*/}
+      {/*</div>*/}
+
       <div className={cn.holder}>
-        <h1 className={cn.title}>Andrew Bare</h1>
+        <img src={icon} style={{'width':'75px','height':'75px', }}/>
+        {writeTitle()}
         {drawSocials()}
         {/*<a onClick={()=> triggerDropdown()}>{drawIcon()}</a>*/}
       </div>
@@ -63,6 +71,15 @@ export default function TopBar(){
 }
 
 const useStyles = makeStyles({
+  topBar:{
+    maxHeight:'80px', maxWidth: window.innerWidth,
+    position: "fixed",
+    zIndex: 2,
+    left: 0,
+    top: 0,
+    right: 0,
+  },
+
   title:{
     // flex: 2,
 
@@ -75,9 +92,10 @@ const useStyles = makeStyles({
   holder:{
     // paddingLeft: '20%',
     // paddingRight: '20%',
-    position: "fixed",
+    position: "relative",
     left:0,
-    right: 0,
+    // right: 0,
+    width: '100%',
     top:0,
     zIndex: 2,
     
@@ -85,7 +103,7 @@ const useStyles = makeStyles({
     height: '80px',
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   

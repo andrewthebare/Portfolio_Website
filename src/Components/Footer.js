@@ -51,6 +51,7 @@ const useStyles = makeStyles({
         alignItems: "center",
         paddingLeft: '10%',
         paddingRight: '10%',
+        paddingBottom: '15px',
     },
 
     socialsHolder:{
