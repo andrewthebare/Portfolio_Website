@@ -74,7 +74,7 @@ const SquareDisplay = (props)=>{
 
 
   return(
-      <a className={styles.linkStyle} href={props.link || 'none'} target={'_blank'}>
+      <a className={styles.linkStyle} href={props.link || ''} target={'_blank'}>
         <div className={styles.base}>
           {hasPicture()}
           <h2>{props.title}</h2>

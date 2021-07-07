@@ -1,21 +1,21 @@
 export const projectData = [
   {
-    title:"Local Food Finder App",
-    description: "A simple rewards app for small, local business",
+    title:"Local Rewards",
+    description: "A simple rewards app for small business",
     icon: 'phone',
     ghSource: "https://github.com/andrewthebare/foodfinderapp",
     imgSrc: "../images/FoodFinderAppPics.png",
     imgName: 'FoodFinder',
-    bgColor: '#92D45F'
+    // bgColor: '#92D45F'
   },
   {
     "title": "Volley Heads",
-    "description": "A physics based volleyball game",
+    "description": "A physics based volleyball game built from scratch with SDL",
     icon: 'vg',
     imgSrc: "https://media.giphy.com/media/N7lNIg7QXCX7oJehKc/giphy.gif",
     imgName: 'vball',
     ghSource: "https://github.com/andrewthebare/Volleyball-Heads",
-    bgColor: '#ddd4d4'
+    // bgColor: '#ddd4d4'
   },
   {
     title:"Basic TicTacToe",
@@ -26,11 +26,11 @@ export const projectData = [
     link:'./pages/TicTacToe/index.html'
   },
   {
-    title:"Basic Minesweeper",
-    description: "A basic implementation of minesweeper",
+    title:"Farkle",
+    description: "An android app version of the medieval dice game: Farkle",
     icon: 'phone',
     imgSrc: "",
-    ghSource: 'https://github.com/andrewthebare/littleStarterProjects/tree/master/ReactPractice/minesweeper'
+    ghSource: 'https://github.com/andrewthebare/PigDice'
   }
   
 ]

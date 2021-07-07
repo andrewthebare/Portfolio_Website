@@ -2,9 +2,12 @@ import React from 'react';
 import {makeStyles} from "@material-ui/core";
 
 import arrowBG from './images/ArrowBG.png'
-import profile from './images/TrollyStop.JPG'
-import igProfile from './images/igProfile.PNG'
-import Button from "@material-ui/core/Button";
+// import profile from './images/TrollyStop.JPG'
+// import igProfile from './images/igProfile.PNG'
+import mountainBGSquare from './images/mountainBGSquare.jpeg'
+import thumbsUp from './images/thumbsUp.jpg'
+// import guat from './images/GuatPic.PNG'
+// import Button from "@material-ui/core/Button";
 import TopBar from "./TopBar";
 import SquareDisplay from "./Components/SquareDIsplay";
 import {projectData} from "./projectData";
@@ -12,7 +15,7 @@ import {projectData} from "./projectData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from "./Components/Footer";
+import Footer, {SocialIconCustom} from "./Components/Footer";
 import SkillSquare from "./Components/SkillSquare";
 
 
@@ -45,7 +48,7 @@ export default function (props) {
             {/*<a className={cn.contactBTN}>Get in Touch</a>*/}
           </div>
   
-          <img className={`${cn.heroContentItem} ${cn.imgFit}`} src={profile}/>
+          <img className={`${cn.heroContentItem} ${cn.imgFit}`} src={mountainBGSquare}/>
         </div>
       </div>
       <br/>
@@ -62,7 +65,7 @@ export default function (props) {
       {/*  <SkillSquare bgColor={'#777'}/>*/}
       </div>
       <div className={`${cn.blueBG} ${cn.section}`}>
-        <h3>I've built some pretty cool things</h3>
+        <h3>Here are some things I've made</h3>
         <div className={cn.slider}>
           <Slider {...settings}>
             {projectData.map(block=>{
@@ -99,25 +102,26 @@ export default function (props) {
           {/*<TimeLineElement title={'Software Engineer'} subtitle={'Capgemini inc'}/>*/}
           {/*/!*<TimeLineElement title={'Freelance Software Developer'} subtitle={'Shopify and Web Development'}/>*!/*/}
         </div>
-        <div className={cn.orangeButton}>
+        <a className={cn.orangeButton} href={'https://drive.google.com/file/d/1on_sqXqAPLNGkb_14wIRpnLH47KzdKfW/view?usp=sharing'} target={'_blank'}>
           <h6>Here's my Resume</h6>
-        </div>
+        </a>
       </div>
       <br/>
       <div className={cn.section}>
         <h2>Who am I?</h2>
         <div className={cn.aboutMeHolder}>
           <div className={cn.aboutMeImageHolder}>
-            <img className={`${cn.aboutMeImage}`} src={igProfile}/>
+            <img className={`${cn.aboutMeImage}`} src={thumbsUp}/>
           </div>
           <div className={cn.aboutMeContent}>
             <h5 className={cn.text}>Powered by Sweet Tea, I'm a true son of the south!</h5>
             <h6 className={cn.text}>I'm also a...</h6>
             <div>
-              <h6>Clemson University Grad</h6>
-              <h6>Soccer Addict</h6>
-              <h6>World Traveler</h6>
+              <h6>Clemson University Student</h6>
+              <h6>Soccer Fanatic</h6>
+              <h6>and World Traveler</h6>
             </div>
+            <h6>Catch a glimpse of my life here:<SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://www.instagram.com/andrewthebare'}/></h6>
             {/*<div className={cn.orangeButton}><h6>More About Me</h6></div>*/}
           </div>
 
@@ -258,8 +262,8 @@ const useStyles=makeStyles({
   aboutMeImageHolder:{
     flex: 1,
     backgroundColor: 'rgba(15,125,218,1)',
-    padding: '3%',
-    borderRadius: ' 0% 2% 2% 0%',
+    padding: '1%',
+    marginLeft: '-10px',    borderRadius: ' 0% 2% 2% 0%',
     objectFit: "contain",
 
     minWidth: window.innerWidth >800? '50%':'100%',
@@ -336,6 +340,8 @@ const useStyles=makeStyles({
   },
 
   orangeButton:{
+    textDecoration: "none",
+    color: '#232323',
     backgroundColor: 'rgba(252,176,69,1)',
     '&:hover':{
       backgroundColor: 'rgba(242,166,59,.7)',

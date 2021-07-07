@@ -23,6 +23,7 @@ export default function Footer(){
                     <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://github.com/andrewthebare'}/>
                     <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://linkedin.com/in/andrewbareclemson'}/>
                 </div>
+                <p><i>made from scratch in React.js</i></p>
             </div>
         </div>
     )
