@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import FoodFinderAppPics from '../images/FoodFinderAppPics.png'
 import ttt from '../images/TicTacToe.PNG'
-import guat from '../images/GuatPic.PNG'
+import catan from'../images/catan.PNG'
 
 import { makeStyles } from '@material-ui/core/styles';
 import {Button} from "@material-ui/core";
@@ -41,6 +41,9 @@ const SquareDisplay = (props)=>{
           break;
         case 'vball':
           src= props.imgSrc;
+          break;
+        case 'catan':
+          src= catan;
           break;
       }
       console.log('src', src)
@@ -136,8 +139,10 @@ const useStyles = makeStyles({
   },
   image:{
     // position: "absolute",
-    width: '100%',
-    height:'100%',
+    maxWidth: '100%',
+    // height:'100%',
+    marginLeft: "auto",
+    marginRight: "auto",
     borderRadius: '2%'
   },
   

@@ -1,8 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
 import {makeStyles} from "@material-ui/core";
-
-import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
 
 export default function Footer(){

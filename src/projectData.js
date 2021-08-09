@@ -1,5 +1,15 @@
 export const projectData = [
   {
+    title:"Catan Map Maker",
+    description: "A flexible catan board generator that allows users to make boards according to a set of chosen parameters",
+    icon: 'web',
+    ghSource: "https://github.com/andrewthebare/catan_generator",
+    link: 'https://catanmapmaker.com',
+    imgSrc: "../images/catan.png",
+    imgName: 'catan',
+    // bgColor: '#92D45F'
+  },
+  {
     title:"Local Rewards",
     description: "A simple rewards app for small business",
     icon: 'phone',

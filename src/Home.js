@@ -201,6 +201,7 @@ const useStyles=makeStyles({
     position:"absolute",
     top: '-10%',
     minWidth: "100%",
+    maxWidth: '100%',
     height: '120%',
     zIndex:-1,
   },
