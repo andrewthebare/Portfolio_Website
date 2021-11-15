@@ -93,8 +93,8 @@ export default function (props) {
           <div className={cn.credentialsSquare}>
             <div>
               <h4>Current Job</h4>
-              <h5>Freelance Software Developer</h5>
-              {/*<h6></h6>*/}
+              <h5>Software Engineer @ Cognito Forms</h5>
+              <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://linkedin.com/in/andrewbareclemson'}/>
             </div>
           </div>
 

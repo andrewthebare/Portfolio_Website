@@ -31,7 +31,7 @@ export function SocialIconCustom(props){
     const [iconColor, setIconColor] = useState('#fcfcfc');
 
     return(
-        <SocialIcon onMouseEnter={()=>setIconColor(props.bgColor)} onMouseLeave={()=> setIconColor(props.bgBase)} bgColor={iconColor} fgColor={'#333'} url={props.url}/>
+        <SocialIcon onMouseEnter={()=>setIconColor(props.bgColor)} onMouseLeave={()=> setIconColor(props.bgBase)} bgColor={iconColor} fgColor={'#333'} url={props.url} target={'_blank'}/>
     )
 }
 

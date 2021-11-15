@@ -33,7 +33,6 @@ export const projectData = [
     icon: 'web',
     imgSrc: "../images/TicTacToe.PNG",
     imgName: 'ttt',
-    link:'./pages/TicTacToe/index.html'
   },
   {
     title:"Farkle",

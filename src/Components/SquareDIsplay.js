@@ -64,6 +64,13 @@ const SquareDisplay = (props)=>{
       )
     }
   }
+  
+  const hasLink = ()=> {
+    if(props.link){
+      console.log('link', props.link);
+      return(<SocialIconCustom bgColor={'#fcfcfc'} bgBase={'#fcfcfc00'} className={[styles.linkBTN]} url={props.link} target={'_blank'}><b>Go</b></SocialIconCustom>)
+    }
+  }
 
   const makeIcon = ()=>{
     switch (props.icon) {
@@ -77,13 +84,14 @@ const SquareDisplay = (props)=>{
 
 
   return(
-      <a className={styles.linkStyle} href={props.link || ''} target={'_blank'}>
+      <a className={styles.linkStyle} target={'_blank'}>
         <div className={styles.base}>
           {hasPicture()}
           <h2>{props.title}</h2>
           <p>{props.description}</p>
           <div className={styles.iconHolder}>
             {makeIcon()}
+            {hasLink()}
             {hasRepo()}
           </div>
         </div>
@@ -107,6 +115,20 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+  },
+  linkBTN:{
+    backgroundColor: '#fcfcfc',
+    borderRadius: '50%',
+    
+    padding: '10px',
+    color: "black",
+    cursor: "pointer",
+    textDecoration: "none",
+    minHeight: '70px,',
+  
+    '&:hover':{
+      backgroundColor:'orange',
+    }
   },
 
   base:{
