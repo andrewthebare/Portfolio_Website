@@ -117,7 +117,7 @@ export default function (props) {
             <h5 className={cn.text}>Powered by Sweet Tea, I'm a true son of the south!</h5>
             <h6 className={cn.text}>I'm also a...</h6>
             <div>
-              <h6>Clemson University Student</h6>
+              <h6>Clemson University Grad</h6>
               <h6>Soccer Fanatic</h6>
               <h6>and World Traveler</h6>
             </div>
