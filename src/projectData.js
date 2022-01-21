@@ -28,18 +28,19 @@ export const projectData = [
     // bgColor: '#ddd4d4'
   },
   {
-    title:"Basic TicTacToe",
-    description: "TicTacToe with nearly unbeatable AI",
-    icon: 'web',
-    imgSrc: "../images/TicTacToe.PNG",
-    imgName: 'ttt',
-  },
-  {
     title:"Farkle",
     description: "An android app version of the medieval dice game: Farkle",
     icon: 'phone',
     imgSrc: "",
     ghSource: 'https://github.com/andrewthebare/PigDice'
+  },
+  {
+    title:"Driver Rewards",
+    description: "A Mock Truck Driver Rewards app build for CPSC 4910",
+    icon: 'web',
+    imgSrc:true,
+    imgName: "driver",
+    ghSource: 'https://github.com/andrewthebare/4910-Driver-Rewards-App'
   }
   
 ]

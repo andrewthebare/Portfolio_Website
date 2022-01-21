@@ -2,12 +2,8 @@ import React from 'react';
 import {makeStyles} from "@material-ui/core";
 
 import arrowBG from './images/ArrowBG.png'
-// import profile from './images/TrollyStop.JPG'
-// import igProfile from './images/igProfile.PNG'
 import mountainBGSquare from './images/mountainBGSquare.jpeg'
 import thumbsUp from './images/thumbsUp.jpg'
-// import guat from './images/GuatPic.PNG'
-// import Button from "@material-ui/core/Button";
 import TopBar from "./TopBar";
 import SquareDisplay from "./Components/SquareDIsplay";
 import {projectData} from "./projectData";
@@ -19,7 +15,7 @@ import Footer, {SocialIconCustom} from "./Components/Footer";
 import SkillSquare from "./Components/SkillSquare";
 
 
-export default function (props) {
+export default function Home(props) {
   
   
   const settings = {
@@ -56,8 +52,8 @@ export default function (props) {
         <h2>What I do</h2>
         <div className={cn.skillsHolder}>
           <SkillSquare skillName={'Web Development'} icon={'web'} description={'Fullstack and fully custom website development'} fontSize={50}/>
+          <SkillSquare skillName={'Mobile Development'} icon={'phone'} description={'Cross platform mobile app design and development specializing in React Native'} fontSize={50}/>
           <SkillSquare skillName={'Shopify'} icon={'cart'} description={'New store creation, custom component development, and expert consulting'} fontSize={50}/>
-          <SkillSquare skillName={'Mobile Development'} icon={'phone'} description={'Android Mobile App design and development '} fontSize={50}/>
           {/*<SkillSquare skillName={'Full Stack Consulting'} icon={'assess'} description={''}/>*/}
           <SkillSquare skillName={'Unity Development'} icon={'vg'} description={'Unity Component scripting'} fontSize={50}/>
         </div>
@@ -86,14 +82,12 @@ export default function (props) {
               <h4>Education</h4>
               <h5>Clemson University</h5>
               <p>BS Computer Science 2021</p>
-
             </div>
-
           </div>
           <div className={cn.credentialsSquare}>
             <div>
               <h4>Current Job</h4>
-              <h5>Software Engineer @ Cognito Forms</h5>
+              <a style={{textDecoration:'none', color:'black'}} href='https://cognitoforms.com'><h5>Software Engineer @ Cognito Forms</h5></a>
               <SocialIconCustom bgColor={'#ef8d26'} bgBase={'#fcfcfc'} url={'https://linkedin.com/in/andrewbareclemson'}/>
             </div>
           </div>

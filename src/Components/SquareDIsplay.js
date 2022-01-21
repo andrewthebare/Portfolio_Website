@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import FoodFinderAppPics from '../images/FoodFinderAppPics.png'
 import ttt from '../images/TicTacToe.PNG'
 import catan from'../images/catan.PNG'
+import adminDashboard from'../images/AdminDashboard.PNG'
 
 import { makeStyles } from '@material-ui/core/styles';
 import {Button} from "@material-ui/core";
@@ -44,6 +45,11 @@ const SquareDisplay = (props)=>{
           break;
         case 'catan':
           src= catan;
+          break;
+        case 'driver':
+          src= adminDashboard;
+          break;
+        default:
           break;
       }
       console.log('src', src)
@@ -87,7 +93,7 @@ const SquareDisplay = (props)=>{
       <a className={styles.linkStyle} target={'_blank'}>
         <div className={styles.base}>
           {hasPicture()}
-          <h2>{props.title}</h2>
+          <h2 style={{fontSize:'2em'}}>{props.title}</h2>
           <p>{props.description}</p>
           <div className={styles.iconHolder}>
             {makeIcon()}
